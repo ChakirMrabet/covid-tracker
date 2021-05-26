@@ -1,0 +1,14 @@
+<div class="mt-4 d-flex align-items-center"
+     [class]="{'justify-content-between':showReturnButton, 'justify-content-center':!showReturnButton}">
+    <div [class.text-center]="!showReturnButton">
+        <p class="mb-0">Chakir Mrabet, 2021.</p>
+        <p class="text-muted text-small">Data taken from <a href="https://github.com/M-Media-Group/Covid-19-API"
+               target="_blank">MMediaGroup</a>
+        </p>
+    </div>
+    <button *ngIf="showReturnButton" class="btn btn-danger" (click)="scrollToTop()" title="Go to the top">
+        &#8963;
+    </button>
+
+
+</div>

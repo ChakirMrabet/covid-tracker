@@ -1,0 +1,103 @@
+<div class="container">
+
+    <app-header></app-header>
+
+    <div *ngIf="item$ | async as item; else loading">
+        <p class="fs-3 fw-lighter text-muted">{{ item.country }} - {{ item.continent }}</p>
+
+        <div class="country-body">
+
+            <div class="bg-light p-2 radius">
+
+                <h2 class="fs-3 fw-lighter text-uppercase">Cases</h2>
+
+                <div class="row">
+                    <div class="col">
+                        <label class="fs-5 text-uppercase">Confirmed</label>
+                    </div>
+                    <div class="col fs-3 text-danger text-end">{{ item.confirmed | prettyNumber }}</div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label class="fs-5 text-uppercase">Deaths</label>
+                    </div>
+                    <div class="col fs-3 text-danger text-end">{{ item.deaths | prettyNumber }}</div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label class="fs-5 text-uppercase">Recovered</label>
+                    </div>
+                    <div class="col fs-3 text-success text-end">{{ item.recovered | prettyNumber }}</div>
+                </div>
+
+            </div>
+
+            <div class="bg-secondary mt-4 p-2 rounded">
+
+                <h2 class="fs-3 fw-lighter text-light text-uppercase">Statistics</h2>
+
+                <div class="row mb-2">
+                    <div class="col">
+                        <label class="text-uppercase text-light ">Population</label>
+                    </div>
+                    <div class="col text-end text-light">{{ item.population | prettyNumber }}</div>
+                </div>
+
+
+                <div class="row mb-2">
+                    <div class="col">
+                        <label class="text-uppercase text-light ">Infection Rate</label>
+                    </div>
+                    <div class="col text-end text-light">{{ item.confirmed / item.population | percent }}</div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label class="text-uppercase text-light ">Death Rate</label>
+                    </div>
+                    <div class="col text-end text-light">{{ item.deaths / item.confirmed | percent:'.2' }}</div>
+                </div>
+
+                <div class="row mb-2">
+                    <div class="col">
+                        <label class="text-uppercase text-light ">Life Expectancy</label>
+                    </div>
+                    <div class="col text-end text-light">{{ item.life_expectancy }} years</div>
+                </div>
+
+                <div class="row mb-2">
+                    <div class="col">
+                        <label class="text-uppercase text-light ">Capital</label>
+                    </div>
+                    <div class="col text-end text-light">{{ item.capital_city }}</div>
+                </div>
+
+                <div class="row mb-2">
+                    <div class="col">
+                        <label class="text-uppercase text-light ">Area</label>
+                    </div>
+                    <div class="col text-end text-light">{{ item.sq_km_area | prettyNumber}} km<sup>2</sup></div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="mt-4 d-flex justify-content-center">
+            <a routerLink="/" class="btn btn-danger">
+                < Return</a>
+        </div>
+
+        <app-footer [showReturnButton]="false"></app-footer>
+
+    </div>
+
+    <ng-template #loading>
+        <div class="country-body d-flex justify-content-center align-items-center">
+            <app-loader></app-loader>
+        </div>
+    </ng-template>
+
+</div>

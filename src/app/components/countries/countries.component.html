@@ -1,0 +1,42 @@
+<div class="container">
+
+    <app-header></app-header>
+
+    <p class="fs-3 fw-lighter text-muted">Total cases per country to date.</p>
+
+
+    <ul class="list-group mt-4">
+
+        <ng-container *ngIf="items$ | async as items; else loading">
+
+            <ng-container *ngFor="let item of items">
+
+                <a *ngIf="item.country" [routerLink]="['/country', item.country]"
+                   class="list-group-item list-group-item-action animate__animated animate__bounce animate___fadeIn d-flex justify-content-between align-items-center">
+                    <div>
+                        <div class="text-uppercase">{{ item.country }}</div>
+                        <div class="text-muted">{{ item.continent }}</div>
+                    </div>
+                    <div class="fs-5 text-danger">
+                        {{ item.confirmed | prettyNumber }}
+                    </div>
+                </a>
+
+            </ng-container>
+
+            <app-footer></app-footer>
+
+        </ng-container>
+
+    </ul>
+
+    <ng-template #loading>
+
+        <div class="countries-body d-flex justify-content-center align-items-center">
+            <app-loader></app-loader>
+        </div>
+
+    </ng-template>
+
+
+</div>
