@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1622074861582,
+  "timestamp": 1622078588363,
   "index": "/covid-tracker/index.html",
   "assetGroups": [
     {
@@ -52,7 +52,7 @@
         "https:\\/\\/covid-api\\.mmediagroup\\.fr\\/v1\\/cases\\/.*"
       ],
       "strategy": "freshness",
-      "maxSize": 20,
+      "maxSize": 300,
       "maxAge": 3600000,
       "timeoutMs": 3000,
       "cacheQueryOptions": {
