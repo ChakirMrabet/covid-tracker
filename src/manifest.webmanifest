@@ -1,9 +1,9 @@
 {
   "name": "COVID Tracker - PEC5",
-  "short_name": "COVIDP5",
-  "description": "Small application made by Chakir Mrabet to learn PWA applications",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "short_name": "COVID Tracker",
+  "description": "Small application made by Chakir Mrabet to learn PWA applications with Angular",
+  "theme_color": "#ee0000",
+  "background_color": "#ffffff",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",

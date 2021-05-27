@@ -1,5 +1,6 @@
 export interface ICountry {
   country: string;
+  abbreviation: string;
   confirmed: number;
   recovered: number;
   deaths: number;

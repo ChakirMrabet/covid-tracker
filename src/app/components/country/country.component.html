@@ -3,7 +3,11 @@
     <app-header></app-header>
 
     <div *ngIf="item$ | async as item; else loading">
-        <p class="fs-3 fw-lighter text-muted">{{ item.country }} - {{ item.continent }}</p>
+        <div class="mt-2 mb-2 d-flex justify-content-start align-items-center">
+            <img src="https://www.countryflags.io/{{ item.abbreviation }}/flat/64.png" width="64"
+                 height="64" alt="{{ item.country }} flag">
+            <p class="fs-3 mb-0 ms-2 fw-lighter text-muted">{{ item.country }} - {{ item.continent }}</p>
+        </div>
 
         <div class="country-body">
 

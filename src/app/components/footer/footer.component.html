@@ -2,8 +2,11 @@
      [class]="{'justify-content-between':showReturnButton, 'justify-content-center':!showReturnButton}">
     <div [class.text-center]="!showReturnButton">
         <p class="mb-0">Chakir Mrabet, 2021.</p>
-        <p class="text-muted text-small">Data taken from <a href="https://github.com/M-Media-Group/Covid-19-API"
+        <p class=" mb-0 text-muted text-small">Data taken from <a href="https://github.com/M-Media-Group/Covid-19-API"
                target="_blank">MMediaGroup</a>
+        </p>
+        <p class="text-muted text-small">Flags from <a href="https://www.countryflags.io/"
+               target="_blank">CountryFlags</a>
         </p>
     </div>
     <button *ngIf="showReturnButton" class="btn btn-danger" (click)="scrollToTop()" title="Go to the top">

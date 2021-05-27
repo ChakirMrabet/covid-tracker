@@ -39,6 +39,16 @@
         "timeout": "5s",
         "strategy": "freshness"
       }
+    },
+    {
+      "name": "country-flag-api",
+      "urls": ["https://www.countryflags.io/**"],
+      "cacheConfig": {
+        "maxSize": 200,
+        "maxAge": "7d",
+        "timeout": "2s",
+        "strategy": "freshness"
+      }
     }
   ]
 }

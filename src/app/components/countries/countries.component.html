@@ -13,9 +13,13 @@
 
                 <a *ngIf="item.country" [routerLink]="['/country', item.country]"
                    class="list-group-item list-group-item-action animate__animated animate__bounce animate___fadeIn d-flex justify-content-between align-items-center">
-                    <div>
-                        <div class="text-uppercase">{{ item.country }}</div>
-                        <div class="text-muted">{{ item.continent }}</div>
+                    <div class="d-flex justify-content-start align-items-center">
+                        <img src="https://www.countryflags.io/{{ item.abbreviation }}/shiny/48.png" width="48"
+                             height="48" alt="{{ item.country }} flag">
+                        <div class="ps-2">
+                            <div class="text-uppercase">{{ item.country }}</div>
+                            <div class="text-muted">{{ item.continent }}</div>
+                        </div>
                     </div>
                     <div class="fs-5 text-danger">
                         {{ item.confirmed | prettyNumber }}
