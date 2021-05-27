@@ -35,7 +35,7 @@
       "name": "covid-api",
       "urls": ["https://covid-api.mmediagroup.fr/v1/cases/**"],
       "cacheConfig": {
-        "maxSize": 20,
+        "maxSize": 300,
         "maxAge": "1h",
         "timeout": "3s",
         "strategy": "freshness"
