@@ -33,7 +33,7 @@
   "dataGroups": [
     {
       "name": "covid-api",
-      "urls": ["https://covid-api.mmediagroup.fr/v1/cases/**"],
+      "urls": ["https://covid-api.mmediagroup.fr/v1/**"],
       "cacheConfig": {
         "maxSize": 20,
         "maxAge": "1h",
