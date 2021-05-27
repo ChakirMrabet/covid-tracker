@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1622083416714,
+  "timestamp": 1622113324758,
   "index": "/covid-tracker/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/covid-tracker/favicon.ico",
         "/covid-tracker/index.html",
-        "/covid-tracker/main.dc46b4b0909e78272cee.js",
+        "/covid-tracker/main.527591b4d189bf8fa900.js",
         "/covid-tracker/manifest.webmanifest",
         "/covid-tracker/polyfills.00096ed7d93ed26ee6df.js",
         "/covid-tracker/runtime.7b63b9fd40098a2e8207.js",
@@ -59,6 +59,20 @@
         "ignoreVary": true
       },
       "version": 1
+    },
+    {
+      "name": "country-flag-api",
+      "patterns": [
+        "https:\\/\\/www\\.countryflags\\.io\\/.*"
+      ],
+      "strategy": "freshness",
+      "maxSize": 200,
+      "maxAge": 604800000,
+      "timeoutMs": 2000,
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "version": 1
     }
   ],
   "hashTable": {
@@ -73,9 +87,9 @@
     "/covid-tracker/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "/covid-tracker/assets/img/logo.jpg": "3160754f5b856aee7942db65d444cd914c2f62f7",
     "/covid-tracker/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/covid-tracker/index.html": "472da34d9bc298b9b6023df2e04d13beb9796732",
-    "/covid-tracker/main.dc46b4b0909e78272cee.js": "25e9e7008a21b59988d1051717f08ca45887e16e",
-    "/covid-tracker/manifest.webmanifest": "d18173c52afa106f6555242d85e6167f1a741123",
+    "/covid-tracker/index.html": "50d9c067d271970a5c23893326bff554c8f6be9d",
+    "/covid-tracker/main.527591b4d189bf8fa900.js": "732f1fd94c10969ac072ad6e1e759a5a84785d58",
+    "/covid-tracker/manifest.webmanifest": "65ebab6e005adb7798327fd62f2aab0ad0fe57f6",
     "/covid-tracker/polyfills.00096ed7d93ed26ee6df.js": "cfe7b0b53e96bff9ba384b4d497c08475a617d62",
     "/covid-tracker/runtime.7b63b9fd40098a2e8207.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
     "/covid-tracker/styles.a5e60b2c7ebaf2f6b987.css": "67b3c77336559ecbdafa816789e92a1c10e93f4b"
